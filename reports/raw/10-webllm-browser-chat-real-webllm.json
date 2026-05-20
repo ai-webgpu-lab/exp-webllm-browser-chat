@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "repo": "exp-webllm-browser-chat",
+    "commit": "c332e2e",
+    "timestamp": "2026-05-20T15:46:57.850Z",
+    "owner": "ai-webgpu-lab",
+    "track": "llm",
+    "scenario": "webllm-browser-chat-readiness-webgpu",
+    "notes": "promptTokens=20; outputTokens=56; executionMode=webgpu; backend=webgpu; realAdapter=fallback(adapter.loadModel is not a function); automation=playwright-chromium",
+    "capture_context": {
+      "tool": "playwright-chromium",
+      "browser_name": "Chromium",
+      "browser_version": "147.0.7727.15",
+      "headless": true,
+      "captured_at": "2026-05-20T15:46:58.010Z",
+      "captured_by": "codex"
+    },
+    "capture_scenario_id": "10-webllm-browser-chat-real-webllm",
+    "capture_url_search": "?mode=real-webllm"
+  },
+  "environment": {
+    "browser": {
+      "name": "Chrome",
+      "version": "147.0.7727.15"
+    },
+    "os": {
+      "name": "Linux",
+      "version": "unknown"
+    },
+    "device": {
+      "name": "Linux x86_64",
+      "class": "desktop-high",
+      "cpu": "16 threads",
+      "memory_gb": 32,
+      "power_mode": "unknown"
+    },
+    "gpu": {
+      "adapter": "synthetic-webgpu-profile",
+      "required_features": [
+        "shader-f16"
+      ],
+      "limits": {}
+    },
+    "backend": "webgpu",
+    "fallback_triggered": false,
+    "worker_mode": "worker",
+    "cache_state": "warm"
+  },
+  "workload": {
+    "kind": "llm-chat",
+    "name": "webllm-browser-chat-readiness",
+    "input_profile": "prompt-20-output-56",
+    "model_id": "webllm-browser-chat-baseline",
+    "context_tokens": 20,
+    "output_tokens": 56
+  },
+  "metrics": {
+    "common": {
+      "time_to_interactive_ms": 1839.4,
+      "init_ms": 84.2,
+      "success_rate": 1,
+      "peak_memory_note": "32 GB reported by browser",
+      "error_type": ""
+    },
+    "llm": {
+      "ttft_ms": 19.2,
+      "prefill_tok_per_sec": 826.45,
+      "decode_tok_per_sec": 208.18,
+      "turn_latency_ms": 377.4
+    }
+  },
+  "status": "success",
+  "artifacts": {
+    "raw_logs": [
+      "./reports/logs/10-webllm-browser-chat-real-webllm.log"
+    ],
+    "deploy_url": "https://ai-webgpu-lab.github.io/exp-webllm-browser-chat/",
+    "runtime_adapter": {
+      "id": "webllm-llama-3-2-1b-instruct-q4f16-1-mlc-0278",
+      "label": "WebLLM 0.2.78 Llama-3.2-1B-Instruct-q4f16_1-MLC",
+      "status": "connected",
+      "isReal": true,
+      "version": "0.2.78",
+      "capabilities": [
+        "prefill",
+        "decode",
+        "streaming",
+        "fixed-output-budget"
+      ],
+      "loadType": "async",
+      "message": "Real runtime adapter 'webllm-llama-3-2-1b-instruct-q4f16-1-mlc-0278' is connected."
+    },
+    "screenshots": [
+      "./reports/screenshots/10-webllm-browser-chat-real-webllm.png"
+    ]
+  }
+}
